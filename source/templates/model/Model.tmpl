@@ -1,0 +1,28 @@
+$if(package_name)$
+$package_line$
+$endif$
+
+$if(enhance)$
+import com.scooterframework.orm.activerecord.ActiveRecord;
+$endif$
+
+
+/**
+ * $model_class_name$ class represents a $model_name$ record in database.
+ */
+public class $model_class_name$ extends $super_class_name$ {
+$if(connection_name)$
+
+	public String getConnectionName() {
+		return "$connection_name$";
+	}
+$endif$
+
+$if(table_name)$
+
+	public String getTableName() {
+		return "$table_name$";
+	}
+$endif$
+
+}
